@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Database enhancement narrative for the Grazioso Salvare dashboard.">
+  <meta name="theme-color" content="#07111f">
+  <title>Databases | Zachary Lecroy</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="nav-shell">
+    <a class="brand" href="index.html"><span class="brand-mark">ZL</span><span class="brand-copy"><strong>Zachary Lecroy</strong><span>Computer Science ePortfolio</span></span></a>
+    <nav class="site-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="code-review.html">Code Review</a><a href="software-engineering.html">Software Engineering</a><a href="algorithms.html">Algorithms</a><a href="databases.html" aria-current="page">Databases</a><a href="artifacts.html">Artifacts</a></nav>
+  </div></header>
+
+  <main id="main" class="page-shell">
+    <section class="inner-hero">
+      <p class="eyebrow">Enhancement Three</p>
+      <h1>Databases</h1>
+      <p class="lead">A safer and more efficient MongoDB layer using protected credentials, guarded writes, timeouts, projections, sorting, pagination, and indexing.</p>
+      <div class="meta-row"><span class="pill">MongoDB</span><span class="pill">PyMongo</span><span class="pill">CRUD</span><span class="pill">Pagination</span><span class="pill">Security</span></div>
+    </section>
+
+    <section class="section split">
+      <article class="reading">
+        <h2 id="artifact-description">Artifact description</h2>
+        <p>The artifact I selected is the Grazioso Salvare Rescue Dog Dashboard that I originally created for CS 340. The dashboard uses Python, Dash, Jupyter Notebook, MongoDB, Pandas, Plotly, and Dash Leaflet. It connects to an animal shelter database and helps users identify animals that may be suitable for water rescue, mountain or wilderness rescue, and disaster or individual tracking. The results are displayed in an interactive table along with a breed chart and a map showing the selected animal’s location.</p>
+
+        <h2 id="selection">Justification for inclusion</h2>
+        <p>I selected this artifact because the database is an important part of how the entire dashboard operates. The original application worked, but there were areas where the database connection, security, and query performance could be improved. This gave me an opportunity to demonstrate database skills without rebuilding the project or changing its original purpose.</p>
+        <p>One of the most important enhancements was removing the database username and password from the notebook. The original credentials were written directly in the source code, which could expose them if the project was shared. The enhanced version retrieves the credentials from protected Windows environment variables instead.</p>
+        <p>I also improved the CRUD module by adding connection timeouts, specific PyMongo error handling, and logging. Empty update and delete queries are now rejected because allowing them could accidentally modify or remove many database records. These changes make the application safer and provide clearer information when a database operation fails.</p>
+        <p>The original dashboard could request many records at once. I added database-side limits, sorting, projections, and pagination so the program retrieves only the records needed for the current table page. A compound index was also added for fields commonly used by the rescue searches. The breed chart still summarizes all matching animals, while the table loads the results in smaller groups. These improvements make the database operations more organized and efficient while preserving the same dashboard layout, filters, chart, map, and notebook launch process.</p>
+
+        <div class="callout"><p>Security changes are visible in both the enhanced code and the public portfolio copy: credentials stay outside the source, and potentially destructive empty update or delete queries are rejected.</p></div>
+
+        <h2 id="outcomes">Course outcomes</h2>
+        <p>This enhancement made progress toward the course outcomes I planned to address. Course Outcome 2 involves creating professional and technically sound communication. I supported this outcome by adding clearer database messages and logging that explain whether a connection or query was successful.</p>
+        <p>Course Outcome 4 involves using appropriate computing techniques and tools to create solutions that provide value. I demonstrated this by using MongoDB queries, projections, sorting, pagination, indexing, and the existing CRUD operations to improve how the dashboard accesses its data.</p>
+        <p>Course Outcome 5 involves developing a security mindset. Removing hardcoded credentials and blocking empty update and delete queries directly supported this outcome. These changes reduce the risk of exposing private information or accidentally changing large portions of the database. I met the outcome goals planned for this enhancement and do not need to make major changes to my outcome coverage plan.</p>
+
+        <h2 id="reflection">Reflection</h2>
+        <p>The main thing I learned from this enhancement is that a working database application can still have security and efficiency problems. The original dashboard returned the correct information, but it trusted some operations too much and could retrieve more data than the user currently needed. Adding safeguards and limiting database reads made the project more reliable without making it more complicated for the user.</p>
+        <p>The biggest challenge was improving the backend while keeping the project familiar and easy to run. I wanted the enhanced version to use the same Jupyter Notebook, dashboard layout, controls, chart, and map. I tested the final version with all 78,256 animal records and confirmed that the original rescue searches continued returning the expected results. I also tested the pagination, sorting, table filters, age filters, Reset option, chart, map, database safeguards, and secure credential configuration. This process helped me understand how database security and performance improvements can be added without overhauling an entire application.</p>
+
+        <div class="button-row"><a class="button secondary" href="narratives/Database%20Narrative.docx">Download narrative</a><a class="button" href="artifacts.html">View artifacts</a></div>
+      </article>
+      <aside class="aside"><h2>On this page</h2><ul><li><a href="#artifact-description">Artifact description</a></li><li><a href="#selection">Justification</a></li><li><a href="#outcomes">Course outcomes</a></li><li><a href="#reflection">Reflection</a></li></ul></aside>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-shell"><p>© <span data-year></span> Zachary Lecroy · CS 499 ePortfolio</p><a href="https://github.com/zl714/zl714.github.io">View repository</a></div></footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>

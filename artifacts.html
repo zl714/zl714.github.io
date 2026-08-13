@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Original and enhanced Grazioso Salvare Rescue Dog Dashboard artifacts for Zachary Lecroy's CS 499 ePortfolio.">
+  <meta name="theme-color" content="#07111f">
+  <title>Artifacts | Zachary Lecroy</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="nav-shell">
+    <a class="brand" href="index.html"><span class="brand-mark">ZL</span><span class="brand-copy"><strong>Zachary Lecroy</strong><span>Computer Science ePortfolio</span></span></a>
+    <nav class="site-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="code-review.html">Code Review</a><a href="software-engineering.html">Software Engineering</a><a href="algorithms.html">Algorithms</a><a href="databases.html">Databases</a><a href="artifacts.html" aria-current="page">Artifacts</a></nav>
+  </div></header>
+
+  <main id="main" class="page-shell">
+    <section class="inner-hero">
+      <p class="eyebrow">Original + Enhanced</p>
+      <h1>Grazioso Salvare Rescue Dog Dashboard</h1>
+      <p class="lead">A before-and-after view of the CS 340 dashboard used for all three CS 499 enhancement categories.</p>
+      <div class="meta-row"><span class="pill">Python</span><span class="pill">Dash</span><span class="pill">MongoDB</span><span class="pill">Pandas</span><span class="pill">Plotly</span><span class="pill">Dash Leaflet</span></div>
+    </section>
+
+    <section class="section" aria-labelledby="compare-title">
+      <div class="section-heading"><p class="eyebrow">Before and after</p><h2 id="compare-title">The same system, thoughtfully improved</h2><p>The original establishes the starting point. The enhanced version keeps the same purpose and notebook-based launch process while improving the code, decision logic, database operations, security, and user experience.</p></div>
+      <div class="artifact-compare">
+        <article class="artifact-panel">
+          <div class="logo-frame"><img src="artifacts/original/Grazioso%20Salvare%20Logo.png" alt="Logo included with the original working artifact"></div>
+          <span class="card-number">Before</span>
+          <h2>Original artifact</h2>
+          <p>The working CS 340 dashboard before the CS 499 enhancements. Public credentials have been replaced with placeholders in this portfolio copy.</p>
+          <ul>
+            <li>Jupyter notebook dashboard</li>
+            <li>Python CRUD module</li>
+            <li>Interactive rescue filters</li>
+            <li>Animal table, breed chart, and map</li>
+            <li>Local shelter outcome datasets</li>
+          </ul>
+          <div class="button-row"><a class="button secondary" href="https://github.com/zl714/zl714.github.io/tree/main/artifacts/original">Browse original files</a><a class="button secondary" href="artifacts/original/ProjectTwoDashboard.ipynb">Download notebook</a></div>
+        </article>
+
+        <article class="artifact-panel enhanced">
+          <div class="logo-frame"><img src="artifacts/enhanced/Grazioso%20Salvare%20Logo.png" alt="Grazioso Salvare dog logo used in the enhanced dashboard"></div>
+          <span class="card-number">After</span>
+          <h2>Enhanced artifact</h2>
+          <p>The final CS 499 version, combining the software engineering, algorithms and data structures, and database enhancements.</p>
+          <ul>
+            <li>Current Dash interface and clearer code structure</li>
+            <li>Improved feedback, validation, logging, and checks</li>
+            <li>Age conversion, suitability scoring, and sorting</li>
+            <li>Secure environment-based credentials</li>
+            <li>Guarded CRUD operations, pagination, and indexing</li>
+          </ul>
+          <div class="button-row"><a class="button" href="https://github.com/zl714/zl714.github.io/tree/main/artifacts/enhanced">Browse enhanced files</a><a class="button secondary" href="artifacts/enhanced/ProjectTwoDashboard.ipynb">Download notebook</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="function-title">
+      <div class="section-heading"><p class="eyebrow">Required functionality</p><h2 id="function-title">What the dashboard does</h2></div>
+      <div class="cards">
+        <div class="card"><span class="card-number">Search</span><h3>Rescue profiles</h3><p>Filters dogs for water rescue, mountain or wilderness rescue, and disaster or individual tracking based on the defined requirements.</p></div>
+        <div class="card"><span class="card-number">Explore</span><h3>Interactive results</h3><p>Presents shelter records in a filterable, sortable, paginated table with clear status information.</p></div>
+        <div class="card"><span class="card-number">Understand</span><h3>Chart and map</h3><p>Summarizes matching animals by breed and maps the location of the selected animal when valid coordinates are available.</p></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="files-title">
+      <div class="section-heading"><p class="eyebrow">Project files</p><h2 id="files-title">Direct access</h2><p>The main source files are linked below. The complete folders also contain the datasets used to run and test the dashboard locally.</p></div>
+      <div class="cards">
+        <a class="card" href="artifacts/enhanced/ProjectTwoDashboard.ipynb"><span class="card-number">Notebook</span><h3>ProjectTwoDashboard.ipynb</h3><p>Dashboard layout, callbacks, filters, scoring, charts, maps, and database interaction.</p><span class="card-link">Download enhanced notebook →</span></a>
+        <a class="card" href="artifacts/enhanced/CRUD_Python_Module.py"><span class="card-number">Backend</span><h3>CRUD_Python_Module.py</h3><p>MongoDB connection and create, read, update, delete, counting, indexing, and query support.</p><span class="card-link">Open enhanced module →</span></a>
+        <a class="card" href="https://github.com/zl714/zl714.github.io"><span class="card-number">Repository</span><h3>Complete ePortfolio</h3><p>All portfolio pages, narratives, original and enhanced artifacts, and the code-review release.</p><span class="card-link">View on GitHub →</span></a>
+      </div>
+    </section>
+
+    <section class="section"><div class="callout"><p>The project requires MongoDB credentials supplied through environment variables. Credentials, local virtual environments, caches, and machine-specific files are intentionally excluded from the public portfolio.</p></div><div class="button-row"><a class="button" href="code-review.html">Watch the code review</a><a class="button secondary" href="software-engineering.html">Read the narratives</a></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-shell"><p>© <span data-year></span> Zachary Lecroy · CS 499 ePortfolio</p><a href="https://github.com/zl714/zl714.github.io">View repository</a></div></footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>

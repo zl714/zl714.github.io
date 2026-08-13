@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Software design and engineering enhancement narrative for the Grazioso Salvare dashboard.">
+  <meta name="theme-color" content="#07111f">
+  <title>Software Engineering | Zachary Lecroy</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="nav-shell">
+    <a class="brand" href="index.html"><span class="brand-mark">ZL</span><span class="brand-copy"><strong>Zachary Lecroy</strong><span>Computer Science ePortfolio</span></span></a>
+    <nav class="site-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="code-review.html">Code Review</a><a href="software-engineering.html" aria-current="page">Software Engineering</a><a href="algorithms.html">Algorithms</a><a href="databases.html">Databases</a><a href="artifacts.html">Artifacts</a></nav>
+  </div></header>
+
+  <main id="main" class="page-shell">
+    <section class="inner-hero">
+      <p class="eyebrow">Enhancement One</p>
+      <h1>Software design and engineering</h1>
+      <p class="lead">Focused improvements to structure, maintainability, usability, validation, and feedback—without replacing the original notebook or changing the dashboard’s purpose.</p>
+      <div class="meta-row"><span class="pill">Python</span><span class="pill">Dash</span><span class="pill">Jupyter Notebook</span><span class="pill">Testing</span><span class="pill">User experience</span></div>
+    </section>
+
+    <section class="section split">
+      <article class="reading">
+        <h2 id="artifact-description">Artifact description</h2>
+        <p>The artifact I selected for this enhancement is my Grazioso Salvare Animal Shelter Dashboard from CS 340. I originally created this project as part of the CS 340 course before beginning CS 499. The project uses Python, Dash, Jupyter Notebook, MongoDB, Pandas, Plotly, and Dash Leaflet.</p>
+        <p>The dashboard was designed to help Grazioso Salvare identify animals that may be suitable for search and rescue training. It connects to an animal shelter database and displays the available records in an interactive table. The user can filter the records by Water Rescue, Mountain or Wilderness Rescue, and Disaster or Individual Tracking. The dashboard also includes a chart that summarizes the animals by breed and a map that displays the location of the selected animal.</p>
+
+        <h2 id="selection">Why I selected this artifact</h2>
+        <p>I selected this artifact because it is one of the more complete projects I created during the Computer Science program. It combines several parts of software development in one working application. It has a user interface, database connection, filtering logic, callbacks, a table, a chart, and a map. This made it a good choice for demonstrating software engineering and design skills.</p>
+        <p>I also selected it because I remembered the overall purpose and structure of the project better than some of my other assignments. The original version worked, but there were several areas where the organization, usability, and reliability could be improved. This gave me an opportunity to show that I can review an older project, identify realistic weaknesses, and make focused improvements without replacing the entire application.</p>
+        <p>One of my main goals was to preserve the original system. The enhanced version is still opened and run as a Jupyter Notebook. It still uses Python, Dash, MongoDB, the original CRUD module, and the same rescue filters. I did not want to turn it into a completely different project. Instead, I focused on improving the existing code based on the findings and planned changes from my code review.</p>
+
+        <h2 id="enhancements">Enhancements and skills demonstrated</h2>
+        <p>The first improvement was replacing JupyterDash with the current Dash class. The original notebook produced a warning because JupyterDash is deprecated. The application still worked, but using the current Dash interface makes the notebook more up to date and removes that warning. I also removed unused imports and the remaining starter FIX ME and debug comments. This made the beginning of the notebook easier to read and made it clearer which libraries the application uses.</p>
+        <p>I also fixed the Grazioso Salvare logo. The copied project originally had a placeholder image, and the Base64 value was not being converted correctly before it was sent to the browser. The enhanced version includes the approved dog logo. The notebook checks that the file exists, opens it safely, converts the image to Base64 text, and displays a simple fallback message if the logo is unavailable.</p>
+        <p>The rescue filters still use the same breeds and age ranges as the original project. However, the queries are now stored together in one clearly named dictionary. The original version used a long if and elif section that repeated similar code for each rescue type. Keeping the queries together makes it easier to read, compare, and update while preserving their original behavior.</p>
+        <p>I improved the feedback the application provides to the user. The dashboard now displays how many records were returned by the selected filter. It also displays a clear message if no animals match a filter or if the database cannot be reached. A loading indicator appears while the table is being updated. These changes make it easier for the user to understand what the program is doing instead of leaving an empty area without an explanation.</p>
+        <p>The chart callback was also cleaned up. The original callback converted the table data into a dataframe twice, which could overwrite its startup fallback. The enhanced callback only performs the conversion once. It displays a message when no breed data is available, and the title was changed from Number of Dogs by Breed to Animals by Breed. This is more accurate because the Reset option can include cats and other animals.</p>
+        <p>The map was improved by replacing numbered column positions with actual field names such as <code>location_lat</code>, <code>location_long</code>, <code>breed</code>, and <code>name</code>. The original numbered positions could stop working if the order of the table columns changed. The enhanced version also checks whether an animal is selected and whether its coordinates are present and valid. If the map cannot be displayed, the user receives a useful message explaining why. The map width was changed from a fixed 1,000 pixels to a responsive width so that it fits the available screen space.</p>
+        <p>I also added simple logging and four automated startup checks. The logging records important events such as loading the database and applying a rescue filter. The self-checks confirm that the Reset query works, unexpected filter values safely return the Reset query, valid coordinates are accepted, and invalid coordinates are rejected. These are small tests, but they show how basic automated checks can help identify problems before the dashboard starts.</p>
+
+        <h2 id="outcomes">Course outcomes</h2>
+        <p>Course Outcome 2 involves professional written and visual communication. I supported this outcome by improving the labels, status messages, error messages, chart title, logo, and overall presentation of the dashboard. The interface now communicates its current condition more clearly to the user.</p>
+        <p>Course Outcome 3 involves designing and evaluating computing solutions. I supported this outcome by reviewing the original design, identifying weaknesses, and making decisions about organization, callbacks, validation, and user feedback. I also had to consider the tradeoff between improving the project and changing too much of the original system.</p>
+        <p>Course Outcome 4 involves using appropriate computing tools and techniques to deliver value. This enhancement continued to use Python, Dash, MongoDB, Pandas, Plotly, Dash Leaflet, callbacks, and Jupyter Notebook. The improvements made the application easier to understand, maintain, and use while keeping its original purpose.</p>
+
+        <h2 id="reflection">Reflection</h2>
+        <p>The main thing I learned from this process is that improving an existing application does not always mean rebuilding it. One of the biggest challenges was deciding how much to change without turning the artifact into a completely different project. The better approach was to preserve the original notebook and make targeted changes based on the code review.</p>
+        <p>I also learned how small design decisions can affect the usability and maintainability of an application. For example, using field names instead of column numbers makes the map code easier to understand and less likely to break. Adding a simple message for an empty result gives the user useful information without requiring a major change to the application.</p>
+        <p>Another challenge was making sure the enhanced version still returned the same rescue results as the original. After the changes, I tested all four filter options. Reset returned 78,256 records, Water Rescue returned 1,900 records, Mountain or Wilderness Rescue returned 242 records, and Disaster or Individual Tracking returned 158 records. I also confirmed that the logo, table, chart, map, marker, and status messages worked correctly.</p>
+
+        <div class="button-row"><a class="button secondary" href="narratives/Software%20Design%20and%20Engineering%20Narrative.docx">Download narrative</a><a class="button" href="algorithms.html">Next enhancement</a></div>
+      </article>
+      <aside class="aside"><h2>On this page</h2><ul><li><a href="#artifact-description">Artifact description</a></li><li><a href="#selection">Why I selected it</a></li><li><a href="#enhancements">Enhancements</a></li><li><a href="#outcomes">Course outcomes</a></li><li><a href="#reflection">Reflection</a></li></ul></aside>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-shell"><p>© <span data-year></span> Zachary Lecroy · CS 499 ePortfolio</p><a href="https://github.com/zl714/zl714.github.io">View repository</a></div></footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>

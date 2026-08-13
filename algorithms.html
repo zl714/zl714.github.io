@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Algorithms and data structures enhancement narrative for the Grazioso Salvare dashboard.">
+  <meta name="theme-color" content="#07111f">
+  <title>Algorithms &amp; Data Structures | Zachary Lecroy</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="nav-shell">
+    <a class="brand" href="index.html"><span class="brand-mark">ZL</span><span class="brand-copy"><strong>Zachary Lecroy</strong><span>Computer Science ePortfolio</span></span></a>
+    <nav class="site-nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="code-review.html">Code Review</a><a href="software-engineering.html">Software Engineering</a><a href="algorithms.html" aria-current="page">Algorithms</a><a href="databases.html">Databases</a><a href="artifacts.html">Artifacts</a></nav>
+  </div></header>
+
+  <main id="main" class="page-shell">
+    <section class="inner-hero">
+      <p class="eyebrow">Enhancement Two</p>
+      <h1>Algorithms and data structures</h1>
+      <p class="lead">Reusable criteria, consistent age calculations, record validation, scoring, and sorting transform rescue requirements into an understandable decision process.</p>
+      <div class="meta-row"><span class="pill">Dictionaries</span><span class="pill">Validation</span><span class="pill">Unit conversion</span><span class="pill">Scoring</span><span class="pill">Sorting</span></div>
+    </section>
+
+    <section class="section split">
+      <article class="reading">
+        <h2 id="artifact-description">Artifact description</h2>
+        <p>The artifact I selected is the Grazioso Salvare Rescue Dog Dashboard that I originally created for CS 340. The dashboard connects to an animal shelter database and helps users find dogs that may be suitable for water rescue, mountain or wilderness rescue, and disaster or individual tracking. It displays the animals in a table and includes a breed chart and location map.</p>
+
+        <h2 id="selection">Justification for inclusion</h2>
+        <p>I selected this artifact because it gave me an opportunity to improve how the program filters, evaluates, and organizes animal records. I created a Python dictionary that stores the breed and age requirements for each rescue category. This keeps the requirements together instead of repeating similar filtering conditions throughout the dashboard.</p>
+        <p>I also added functions that validate animal records and apply the selected breed, age, and location filters. The age controls now begin at zero because negative ages in the source data are not valid. Users can select weeks, months, or years, while the program converts the selection back into weeks to match the database.</p>
+        <p>Another major improvement was adding a rescue suitability score. Dogs receive points based on their breed, age, and whether they have valid location information. The dashboard can rank the strongest candidates first or sort the results by breed, age, or name. These improvements demonstrate my ability to use dictionaries, functions, filtering, validation, calculations, and sorting algorithms.</p>
+
+        <div class="callout"><p>The filtering process converts different user-facing age units into one database value, then applies the rescue criteria consistently before ranking or sorting the results.</p></div>
+
+        <h2 id="outcomes">Course outcomes</h2>
+        <p>The main course outcome addressed by this enhancement was designing and evaluating computing solutions using algorithmic principles and computer science practices. The rescue criteria, candidate validation, scoring system, and sorting options demonstrate progress toward this outcome. The enhancement also supports the outcome involving the use of appropriate tools and techniques to create solutions that provide value. I met the outcome goals I planned for this enhancement and do not need to make major changes to my original outcome coverage plan.</p>
+
+        <h2 id="reflection">Reflection</h2>
+        <p>The most important thing I learned was that an algorithm should be understandable as well as functional. The original filters worked, but the logic was difficult to reuse. Separating the filtering, validation, scoring, and sorting tasks made the program easier to understand and maintain.</p>
+        <p>One challenge was improving the algorithms without changing the dashboard’s original purpose or breaking its existing features. Another challenge was handling incorrect or missing data, including negative ages and invalid location information. I added validation so those records would not cause incorrect filtering or mapping results.</p>
+        <p>I tested the enhancement with the local database of 78,256 animal records. The original rescue filters continued returning the expected results, and I also tested the new age controls, unit conversions, suitability scores, sorting options, chart, and map. The enhancement made the dashboard more useful while demonstrating my growth in algorithms and data structures.</p>
+
+        <div class="button-row"><a class="button secondary" href="narratives/Algorithms%20and%20Data%20Structures%20Narrative.docx">Download narrative</a><a class="button" href="databases.html">Next enhancement</a></div>
+      </article>
+      <aside class="aside"><h2>On this page</h2><ul><li><a href="#artifact-description">Artifact description</a></li><li><a href="#selection">Justification</a></li><li><a href="#outcomes">Course outcomes</a></li><li><a href="#reflection">Reflection</a></li></ul></aside>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-shell"><p>© <span data-year></span> Zachary Lecroy · CS 499 ePortfolio</p><a href="https://github.com/zl714/zl714.github.io">View repository</a></div></footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>
