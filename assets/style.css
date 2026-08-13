@@ -389,6 +389,10 @@ code {
   gap: 1rem;
 }
 
+.additional-projects {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .card {
   min-height: 100%;
   padding: 1.45rem;
@@ -694,6 +698,7 @@ code {
 
   .metrics,
   .cards,
+  .additional-projects,
   .artifact-compare,
   .video-panel {
     grid-template-columns: 1fr;
